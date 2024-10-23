@@ -1,0 +1,7 @@
+:root {
+    color: #000000 #141414; /*generico sia per Titoli, Sottotitoli,colore testo base*/
+    font-size: 16px;   /*size titoli*/ 
+    background-color:#F47D20; /*background colore bottoni card in tutto il sito*/
+    font-family: 'Times New Roman', Times, serif; /*titoli card*/
+    font-style: "Cera pro, SanSerif";
+}
