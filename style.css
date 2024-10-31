@@ -1,10 +1,150 @@
+@media screen and (max-width: 768px)and (max-width: 375px)and all (min-width: 768px) {
+    /* come faccio a selezionare tutti gli elementi della pagina? */
+}
+
+@font-face {
+    font-family: "Fira Sans";
+    src: url('assets\font\Fontspring-DEMO-cerapro-black.otf');
+    src: url('assets\font\Fontspring-DEMO-cerapro-blackitalic.otf');
+}
+
 :root {
-    --primary-color:rgb(255, 213, 2);
+    --primary-color: rgb(255, 213, 2);
     --primary-font-size: 16px;
     --primary-btn-color: #F47D20;
     --primary-font-family: "Cera pro, SanSerif";
 }
 
-h1 {
- font-family: var(--primary-font-family);
+
+
+.section {
+    background-color: #e4e5ec;
+}
+
+.preferiti_di_questa_settimana {
+    font-family: var(--primary-font-family);
+    font-size: 18px;
+}
+
+/* REGOLE PER SEZIONE 1 PREFERITI DI QUESTA SETTIMANA */
+.pref {
+    display: grid;
+    grid: "pref1 pref 2 pref3";
+    gap: 3px;
+    flex: 1;
+    font-family: var(--primary-font-family);
+    text-align: center;
+    font-size: 12px;
+    align-items: center;
+}
+
+.pref img {
+    width: 95%;
+    height: auto;
+}
+
+.pref p {
+    font-size: 10px;
+}
+
+#pref1 {
+    grid: "pref1"
+}
+
+#pref2 {
+    grid: "pref2"
+}
+
+#pref3 {
+    grid: "pref3"
+}
+
+.buy {
+    font-family: var(--primary-font-family);
+    text-align: center;
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* SEZIONE 2 SET IN EVIDENZA */
+
+.set_in_evidenza {
+    font-size: 16px;
+    font-family: var(--primary-font-family);
+    font-weight: bold;
+    padding: 5px;
+}
+
+.carosel {
+    background-color: #e4e5ec;
+    display: grid;
+    grid: "box1 box2 box3 box4 box5";
+    padding: 3%;
+}
+
+.card {
+
+    display: grid;
+    font-family: var(--primary-font-family);
+    width: 150px;
+    height: auto;
+    padding: 0%;
+    font-size: 10px;
+    background-color: white;
+}
+
+.box1 {
+    grid: "box1";
+    gap: 10fr;
+}
+
+.box2 {
+    grid: "box2";
+}
+
+.box3 {
+    grid: "box3";
+}
+
+.box4 {
+    grid: "box4";
+}
+
+.box5 {
+    grid: "box5";
+}
+
+.card img {
+    width: 60%;
+    height: auto;
+}
+
+.btnNews {
+    position: relative;
+    right: -60%;
+    width: 50px;
+    height: 20px;
+    font-size: 10px;
+    font-weight: bold;
+    background-color: var(--primary-color)
+}
+
+.btnBasket {
+    width: 50%;
+    height: auto;
+    background-color: #F47D20;
+    border-radius: 25%;
+    font-weight: bold;
+    font-size: 7px;
+}
+
+.price {
+    font-weight: bold;
+}
+
+.section2 {
+    margin: 10px;
+
 }
