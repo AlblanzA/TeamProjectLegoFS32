@@ -5,6 +5,13 @@
     --primary-font-family: "Cera pro, SanSerif";
 }
 
+
+@font-face {
+    font-family: "Fira Sans";
+    src: url('assets\font\Fontspring-DEMO-cerapro-black.otf');
+    src: url('assets\font\Fontspring-DEMO-cerapro-blackitalic.otf');
+}
+
 h1 {
  font-family: var(--primary-font-family);
 }
