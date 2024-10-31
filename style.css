@@ -1,9 +1,8 @@
-@media screen and (max-width: 768px)and (max-width: 375px)and all (min-width: 768px) {
-    /* come faccio a selezionare tutti gli elementi della pagina? */
+@media screen and (max-width: 768px)and (max-width: 375px)and (min-width: 768px) {
 }
 
 @font-face {
-    font-family: "Fira Sans";
+    font-family:"Cera pro, SanSerif";
     src: url('assets/font/Fontspring-DEMO-cerapro-black.otf');
     src: url('assets/font/Fontspring-DEMO-cerapro-blackitalic.otf');
     src: url('assets/font/Fontspring-DEMO-cerapro-bold.otf');
@@ -31,20 +30,18 @@
 
 .preferiti_di_questa_settimana {
     font-family: var(--primary-font-family);
-    font-size: 18px;
-
+    font-size: 20px;
 }
 
-/* REGOLE PER SEZIONE 1 PREFERITI DI QUESTA SETTIMANA */
+/* REGOLE PER SEZIONE 1 -"PREFERITI DI QUESTA SETTIMANA" */
+
 .pref {
     display: grid;
     grid: "pref1 pref 2 pref3";
     gap: 3px;
-    flex: 1;
     font-family: var(--primary-font-family);
     text-align: center;
-    font-size: 12px;
-    align-items: center;
+    font-size: 14px;
 }
 
 .pref img {
@@ -80,9 +77,8 @@
 /* SEZIONE 2 SET IN EVIDENZA */
 
 .set_in_evidenza {
-    font-size: 16px;
+    font-size: 17px;
     font-family: var(--primary-font-family);
-    font-weight: bold;
     padding: 5px;
 }
 
@@ -155,5 +151,4 @@
 
 .section2 {
     margin: 10px;
-
 }
