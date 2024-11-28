@@ -1,182 +1,319 @@
 @font-face {
-    font-family:"Cera pro, SanSerif";
-    src: url('assets/font/Fontspring-DEMO-cerapro-black.otf');
-    src: url('assets/font/Fontspring-DEMO-cerapro-blackitalic.otf');
-    src: url('assets/font/Fontspring-DEMO-cerapro-bold.otf');
-    src: url('assets/font/Fontspring-DEMO-cerapro-bolditalic.otf');
-    src: url('assets/font/Fontspring-DEMO-cerapro-light.otf'); 
-    src: url('assets/font/Fontspring-DEMO-cerapro-lightitalic.otf');
-    src: url('assets/font/Fontspring-DEMO-cerapro-medium.otf');
-    src: url('assets/font/Fontspring-DEMO-cerapro-mediumitalic.otf');
-    src: url('assets/font/Fontspring-DEMO-cerapro-regular.otf');
-    src: url('assets/font/Fontspring-DEMO-cerapro-regularitalic.otf');
-    src: url('assets/font/Fontspring-DEMO-cerapro-thin.otf');
-    src: url('assets/font/Fontspring-DEMO-cerapro-thinitalic.otf');
+  font-family: "Cera pro, SanSerif";
+  src: url("assets/font/Fontspring-DEMO-cerapro-regular.otf");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Cera pro, SanSerif";
+  src: url("assets/font/Fontspring-DEMO-cerapro-bold.otf");
+  font-style: bold;
+  font-weight: 700;
 }
 
 :root {
-    --primary-color: rgb(255, 213, 2);
-    --primary-font-size: 16px;
-    --primary-btn-color: #F47D20;
-    --primary-font-family: "Cera pro, SanSerif";
+  --primary-color: rgb(255, 213, 2);
+  --primary-font-size: 16px;
+  --primary-btn-color: #f47d20;
+  --primary-font-family: "Cera pro, SanSerif";
 }
 
-.section {
-    margin:auto;
-    background-color: #e4e5ec;
-    width: 70%;
-    height: 800px;
+/* Stili generali (desktop-first) */
+body {
+  width: 100%;
+  height: auto;
+}
+
+/* Stili per dispositivi con schermi piccoli (max 768px) */
+@media (max-width: 768px) {
+  .pref {
+    width: 100%;
+    height: auto;
+  }
+  .pref img {
+    width: 100%;
+    height: auto;
+  }
+  .section,
+  .section2 {
+    flex-direction: column; /* Cambia in colonna su schermi piccoli */
+    align-items: center; /* Centra contenuti */
+  }
+
+  .carosel {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .btnNews {
+    width: 100%;
+    height: auto;
+  }
+  .imgcard {
+    width: 100%;
+    height: auto;
+  }
+  .carosel > * {
+    flex: 1 1 45%; /* Aumenta la larghezza al 45% su schermi medi */
+  }
+}
+
+@media (max-width: 480px) {
+  .pref img {
+    width: 100%;
+    height: auto;
+  }
+
+  .pref {
+    flex: 1 1 100%; /* Elementi a tutta larghezza su schermi molto piccoli */
+  }
+  .btnBasket {
+    width: 100%;
+    height: auto;
+  }
+  .btnNews {
+    width: 100%;
+    height: auto;
+  }
+  .section {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    width: 100%;
+    height: auto;
+    background-color: #8dd8d7;
+    margin: 0;
+  }
+  .section2 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .carosel {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .imgcard {
+    width: 100%;
+    height: auto;
+  }
+
+  .pref img {
+    width: 100%;
+    height: auto;
+  }
+  .section,
+  .section2 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .btnNews {
+    width: 100%;
+    height: auto;
+  }
+  .carosel > * {
+    flex: 1 1 100%; /* Gli elementi occupano tutta la larghezza su schermi piccoli */
+  }
 }
 
 .preferiti_di_questa_settimana {
-    font-family: var(--primary-font-family);
-    font-size: 20px;
+  font-family: var(--primary-font-family);
+  font-size: 24px;
+  padding: 0.5rem;
 }
 
 /* REGOLE PER SEZIONE 1 -"PREFERITI DI QUESTA SETTIMANA" */
 
 .pref {
-    display: grid;
-    grid: "pref1 pref 2 pref3";
-    gap: 1px;
-    font-family: var(--primary-font-family);
-    text-align: center;
-    font-size: 14px;
-}
-
-.pref img {
-    width: 70%;
-    height: 100%;
-    position: relative;
-    left: 35px;
-}
-
-.pref p {
-    font-size: 10px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: flex-start;
+  padding: 0.5rem;
+  font-family: var(--primary-font-family);
+  text-align: center;
+  font-size: 18px;
+  gap: 0.75rem;
+  max-width: 100%;
+  width: auto;
+  height: 100%;
+  background-color: #f9fefe;
+  flex-wrap: wrap;
+  margin: 0;
 }
 
 #pref1 {
-    grid: "pref1"
+  font-family: var(--primary-font-family);
+  font-size: normal;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 #pref2 {
-    grid: "pref2"
+  font-family: var(--primary-font-family);
+  font-size: normal;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 #pref3 {
-    grid: "pref3"
+  font-style: var(--text-color);
+  font-size: normal;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.pref img {
+  width: 100%;
+  height: auto;
+  position: static;
+  max-width: 300px; /* Dimensione massima */
+  flex-wrap: wrap;
+}
+
+.pref p {
+  font-size: auto;
+  background-color: white;
 }
 
 .buy {
-    font-family: var(--primary-font-family);
-    text-align: center;
-    font-size: 14px;
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
+  font-family: var(--primary-font-family);
+  text-align: center;
+  font-size: 14px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
 }
 
 /* SEZIONE 2 SET IN EVIDENZA */
 
-.set_in_evidenza {
-    font-size: 17px;
-    font-family: var(--primary-font-family);
-    padding: 5px;
+.section2 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex: 1;
+  font-size: 12px;
+  font-family: var(--primary-font-family);
+  margin: 0;
+  align-items: stretch;
 }
-
-
-/*  fix dell'elemento perchè 
-    renderizza meglio in flexbox anzichè in grid, ho visto nel sito lego è utilizzato flexbox,
-    lascio commentato il grid con relativi richiami successivi
-    negli elementi box perchè comunque funzionante */
+.set_in_evidenza {
+  display: flex;
+  flex-direction: row;
+  justify-items: auto;
+  width: 100%;
+  padding: 3%;
+  font-size: 24px;
+  font-family: var(--primary-font-family);
+  margin: 0;
+  margin: 0 0 1rem 0;
+}
 
 .carosel {
-    /* background-color: #e4e5ec;
-    display: grid;
-    grid: "box1 box2 box3 box4 box5";
-    padding: 3%;
-    padding: 30px; */
-
-    display: flex;
-    position: relative;
-    flex-direction: row;
-    padding: .50px;
-    /* meglio unità di misura rem 
-    per addattare a quaslsiasi browser e dispostiivo */
-    gap: .75rem;  
-    width: 100%;
-    height: auto;
-    color: #141414;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  height: auto;
+  color: #141414;
+  margin: 0;
+  max-width: 300px;
+  padding: 16px;
+  gap: 1rem; /* Spazio tra gli elementi */
+  align-items: stretch;
 }
 
-.card {
-
-    display: grid;
-    font-family: var(--primary-font-family);
-    width: 15%;
-    height: auto;
-    padding: 0%;
-    background-color: white;
-    font-weight: bold;
-    font-size: 14px;
+.cardbox1 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  color: #141414;
+  background-color: white;
 }
-
-/*  per i box a seguire ho lasciato una regola di 10fr 
-che serve a tenere i box aperti con relativo tag grid area*/
-.box1 {
-    grid: "box1";
-    gap: 10fr;
+.cardbox2 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  color: #141414;
+  background-color: white;
 }
-
-.box2 {
-    /* grid: "box2"; */
-    gap: 10fr;
+.cardbox3 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: auto;
+  height: auto;
+  color: #141414;
+  background-color: white;
 }
-
-.box3 {
-    /* grid: "box3"; */
-    gap: 10fr;
+.cardbox4 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  color: #141414;
+  background-color: white;
 }
-
-.box4 {
-    /* grid: "box4"; */
-    gap: 10fr;
-}
-
-.box5 {
-    /* grid: "box5"; */
-    gap: 10fr;
-}
-
-.card img {
-    width: 60%;
-    height: auto;
+.cardbox5 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  color: #141414;
+  background-color: white;
 }
 
 .btnNews {
-    position: relative;
-    right: -60%;
-    width: 50px;
-    height: 20px;
-    font-size: 10px;
-    font-weight: bold;
-    background-color: var(--primary-color)
+  width: 100%;
+  height: auto;
+  font-style: var(--primary-font-family);
+  background-color: var(--primary-color);
+  font-weight: bold;
+  max-width: 100%;
 }
 
 .btnBasket {
-    width: 50%;
-    height: auto;
-    background-color: #F47D20;
-    border-radius: 25%;
-    font-weight: bold;
-    font-size: 7px;
+  width: 100%;
+  height: auto;
+  background-color: #f47d20;
+  border-radius: 62.4375rem;
+  font-weight: bold;
+  max-width: 100%;
+  justify-content: center;
+  margin-inline-end: 100px;
 }
 
 .price {
-    font-weight: bold;
+  font-weight: bold;
 }
 
-.section2 {
-    margin: 10px;
+.imgcard {
+  width: 100%;
+  height: auto; /* Altezza fissa per immagini uniformi */
+  max-width: 300px;
+  background-color: white;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 300px;
+  height: 250px;
 }
