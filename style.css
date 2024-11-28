@@ -1,175 +1,230 @@
-body {
-    margin: 0;
-    font-family: var(--primary-font-family);
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Yeseva+One&display=swap');
+.content1 {
+    background-color: rgb(186, 182, 182);
+    font-size: 10px;
+    line-height: 1.6;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
 }
 
-.navbar {
-    background-color: rgb(255, 213, 2);
+.Logo {
+    /*
+    max-width: 100px;
+    
+    max-height: 50px;
+    */
+
+    width: 60px;
+    height: 60px;
+}
+
+
+footer {
+    background-color: #201d48;
+    color: #fff;
+    padding: 40px 0;
+    font-size: 14px;
+}
+
+.footer-container {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    width: 20%;
+    margin-bottom: 20px;
+    min-width: 170px;
+}
+
+.footer-section h3 {
+    font-size: 14px;
+    margin-bottom: 31px;
+    font-weight: 600;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding-left: 0;
+    width: 168px;
+}
+
+.footer-section li {
+    margin-bottom: 18px;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 10px;
+}
+
+.footer-section .Italia{
+    max-width: 58px;
+    margin-top: 18px;
+    background-color: rgb(24, 21, 45);
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 0px;
     display: flex;
     align-items: center;
-    padding: 2px;
 }
 
-.navbar-image {
-    width: 40px;
-    height: auto;
-    margin-left: 20px;
-    align-self: center;
+.footer-section .Italia a{
+    font-size: 8px !important;
+}
+.footer-section .icona-italia {
+    color: rgb(255, 255, 255);
+    line-height: 0;
+    height: 13px;
+    width: 25px;
+    margin-left: 5px;
 }
 
+.footer-section a:hover {
+    text-decoration: underline;
+}
 
-.navbar .menu {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+.social-media li {
+    display: inline;
+    margin-right: 15px;
+}
+
+.social-media a {
+    color: #fff;
+}
+
+.social-media a:hover {
+    text-decoration: underline;
+}
+
+.footer-info li {
+    margin-bottom: 18px;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+}
+
+.footer-bottom {
+    font-family: 'Poppins';
+    background-color: #201d48;
+    padding: 20px;
+    font-size: 12px;
     display: flex;
-    width: 30%;
+    flex-direction: column;
+    gap: 26px;
 }
 
-.navbar li {
+.footer-bottom-top, .footer-bottom-bottom {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-bottom h3 {
+    margin: 0;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.email-container {
+    background-color: #201d48;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding: 10px;
+}
+
+.email-form {
+    display: flex;
+    align-items: center;
     flex: 1;
 }
 
-
-.navbar a {
-    display: block;
-    padding: 14px 20px;
-    text-align: center;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    transition: background-color 0.3s;
-    color: 0.3;
-    text-decoration: 0, 3;
+.email-input {
+    width: 250px;
+    padding: 11px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    outline: none;
 }
 
-.navbar a:hover {
-    background-color: rgb(255, 213, 2);
-    text-decoration: underline;
-}
-
-.natale {
-    background-color: white;
-    color: red;
-    text-decoration: none;
-}
-
-.natale:hover {
-    background-color: black;
+.email-submit {
+    background-color: orange;
     color: white;
-    text-decoration: none;
-}
-
-.natale:link,
-.natale:visited {
-    background-color: white;
-    color: red;
-    text-decoration: none;
-}
-
-.natale:hover {
-    background-color: black !important;
-    color: white;
-    text-decoration: none !important;
-}
-.hamburger {
-    display: none;
-    font-size: 30px;
-    color: white;
-    padding: 14px 20px;
-    cursor: pointer;
-    }
-    #menu-toggle {
-    display: none;
-    }
-
-    @media screen and (max-width: 600px) {
-        .navbar .menu {
-        display: none;
-        width: 100%;
-        }
-        .navbar .menu li {
-        display: block;
-        text-align: left;
-        }
-        #menu-toggle:checked + .hamburger + .menu {
-        display: block;
-        }
-        .hamburger {
-        display: block;
-        }
-        }
-
-.svg {
-    width: 30px;
-    height: auto;
-  display: flex;
-
-
-}
-
-.lego-image {
-    width: 100%;
-    height: auto;
-    align-self: center;
-
-}
-
-.spazio {
-    flex-grow: 1;
-}
-
-.img-background {
-    background-image: url("https://www.lego.com/cdn/cs/set/assets/bltbf451d66a9ede866/77073-Home-202410-Home-P-Hero-Standard-Large-v2.jpg?format=webply&fit=crop&quality=70&width=1600&height=500&dpr=1.5");
-    background-size: cover;
-    background-position: center;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    color: white;
-}
-
-.content {
-    max-width: 600px;
-}
-
-.title { 
-    margin: auto; 
-    font-size: x-large;
-    font-family: cera pro, sans-serif;
-}
-
-.acquistare {
-    margin: 20px 0;
-    font-size: 1.2em;
-}
-
-.compraora {
-    background-color: white;
-    color: black;
     border: none;
-    padding: 10px 20px;
-    font-size: 1em;
+    padding: 10px 10px;
     cursor: pointer;
-    border-radius: 25px;
+    font-size: 18px;
 }
 
-.compraora:hover {
-    text-decoration: underline;
+.email-submit .arrow {
+    font-size: 15px;
+
+    transition: transform 0.3s;
+
 }
 
-.containerimg{
-    width: 50px;
-    height: 50px;
-    background-color: white;
-    border-radius: 50%;
+
+.svg-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.conteinericone{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
+    gap: 10px;
+    flex: 0%;
+    justify-content: flex-end;
 }
 
+.svg-icon {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.links-container {
+    background-color: #201d48;    
+    padding: 20px;
+}
+.links-container .links{
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 20px;
+}
+
+/* Stile per i link */
+.links-container a {
+    text-decoration: none;  
+    color: white;         
+    font-size: 8px;        
+    transition: color 0.3s ease;  
+    margin-right: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.links-container a:hover {
+    text-decoration: overline;         
+}
+
+.system-container {
+    background-color: #201d48;
+    padding: 20px;
+}
+.system-text{
+    color: white;
+    font-size: 8px;
+    font-family: 'Poppins', sans-serif;
+    max-width: 1200px;
+    margin: auto;
+}
