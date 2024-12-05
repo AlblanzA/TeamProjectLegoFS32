@@ -306,6 +306,9 @@ body {
         .hamburger {
         display: block;
         }
+        .contenuto {
+     width: 70%;
+        }
         }
 
 .natale {
@@ -366,7 +369,7 @@ body {
     color: white;
 }
 
-.content {
+.contenuto {
     max-width: 600px;
 }
 
@@ -410,5 +413,5 @@ body {
     gap: 20px;
 }
 
-/* reponsive, classi h1-p, branch, font family  */
+
 
