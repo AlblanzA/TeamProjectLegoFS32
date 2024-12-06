@@ -18,289 +18,351 @@
   --primary-font-family: "Cera pro, SanSerif";
 }
 
-/* Stili generali (desktop-first) */
-body {
-  width: 100%;
-  height: auto;
-}
-
 /* Stili per dispositivi con schermi piccoli (max 768px) */
 @media (max-width: 768px) {
-  .pref {
-    width: 100%;
-    height: auto;
-  }
-  .pref img {
-    width: 100%;
-    height: auto;
-  }
   .section,
   .section2 {
-    flex-direction: column; /* Cambia in colonna su schermi piccoli */
-    align-items: center; /* Centra contenuti */
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    flex-direction: row;
+    font-family: var(--primary-font-family);
   }
 
-  .carosel {
-    width: 100%;
-    height: auto;
+  .preferiti_di_questa_settimana {
     display: flex;
+    margin: auto;
+    position: relative;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .preferiti {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 3px;
+    margin: auto;
+  }
+
+  .pref1,
+  .pref2,
+  .pref3 {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    text-align: center;
+    justify-content: space-between;
+    gap: 3px;
     flex-direction: column;
   }
 
-  .btnNews {
-    width: 100%;
+  .pref img {
+    display: flex;
     height: auto;
+    flex-wrap: wrap;
+  }
+
+  .pref p {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .carosel {
+    width: 100px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0;
+  }
+
+  .cardbox1,
+  .cardbox2,
+  .cardbox3,
+  .cardbox4,
+  .cardbox5 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+
+  .btnNews {
+    max-width: 100px;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
   }
   .imgcard {
-    width: 100%;
+    max-width: 150px;
     height: auto;
-  }
-  .carosel > * {
-    flex: 1 1 45%; /* Aumenta la larghezza al 45% su schermi medi */
+    text-align: center;
+    justify-content: center;
   }
 }
 
 @media (max-width: 480px) {
-  .pref img {
-    width: 100%;
-    height: auto;
+  .section,
+  .section2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .preferiti_di_questa_settimana {
+    display: flex;
+    margin: auto;
+    position: relative;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .pref {
-    flex: 1 1 100%; /* Elementi a tutta larghezza su schermi molto piccoli */
-  }
-  .btnBasket {
-    width: 100%;
-    height: auto;
-  }
-  .btnNews {
-    width: 100%;
-    height: auto;
-  }
-  .section {
-    width: 100%;
-    height: auto;
-    margin: auto;
-    width: 100%;
-    height: auto;
-    background-color: #8dd8d7;
-    margin: 0;
-  }
-  .section2 {
-    width: 100%;
-    height: auto;
+  .preferiti {
     display: flex;
-    flex-direction: column;
+    position: relative;
     flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+  .pref img {
+    width: 50px;
+    height: auto;
+    text-align: center;
+    margin: auto;
+  }
+
+  .pref1,
+  .pref2,
+  .pref3 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 150px;
+    justify-content: space-between;
+    gap: 10px;
+    height: auto;
+    text-align: center;
+    font-family: var(--primary-font-family);
+    margin: auto;
   }
 
   .carosel {
-    width: 100%;
+    max-width: 100px;
     height: auto;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-  .imgcard {
-    width: 100%;
-    height: auto;
-  }
-
-  .pref img {
-    width: 100%;
-    height: auto;
-  }
-  .section,
-  .section2 {
-    align-items: center;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
   }
 
   .btnNews {
-    width: 100%;
+    max-width: 100px;
+    height: auto;
+    justify-content: flex-end;
+    margin: auto;
+  }
+  .imgcard {
+    width: 150px;
     height: auto;
   }
-  .carosel > * {
-    flex: 1 1 100%; /* Gli elementi occupano tutta la larghezza su schermi piccoli */
-  }
+}
+
+/* SEZIONE 1 -"PREFERITI DI QUESTA SETTIMANA" */
+
+.section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  background-color: #e4e3e3;
+  border: solid 50px white;
+  margin: auto;
 }
 
 .preferiti_di_questa_settimana {
   font-family: var(--primary-font-family);
   font-size: 24px;
-  padding: 0.5rem;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 50px;
 }
 
-/* REGOLE PER SEZIONE 1 -"PREFERITI DI QUESTA SETTIMANA" */
-
-.pref {
+.preferiti {
   display: flex;
   flex-direction: row;
-  position: relative;
-  align-items: flex-start;
-  padding: 0.5rem;
-  font-family: var(--primary-font-family);
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   text-align: center;
-  font-size: 18px;
-  gap: 0.75rem;
-  max-width: 100%;
-  width: auto;
-  height: 100%;
-  background-color: #f9fefe;
-  flex-wrap: wrap;
-  margin: 0;
+  gap: 10px;
+  margin: auto;
 }
 
-#pref1 {
+.pref1 {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  position: relative;
+  flex-direction: column;
+}
+
+.pref2 {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  position: relative;
+  flex-direction: column;
+}
+
+.pref3 {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  position: relative;
+  flex-direction: column;
+}
+
+.preftitle {
   font-family: var(--primary-font-family);
-  font-size: normal;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  margin: auto;
+  width: 300px;
+  padding: 10px;
 }
 
-#pref2 {
-  font-family: var(--primary-font-family);
-  font-size: normal;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-}
-
-#pref3 {
-  font-style: var(--text-color);
-  font-size: normal;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-}
-.pref img {
-  width: 100%;
+.prefimg {
+  width: 300px;
   height: auto;
-  position: static;
-  max-width: 300px; /* Dimensione massima */
-  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  padding: 10px;
 }
 
-.pref p {
-  font-size: auto;
-  background-color: white;
+.prefp {
+  display: flex;
+  text-align: center;
+  font-family: var(--primary-font-family);
+  color: #666;
+  margin: auto;
+  width: 350px;
 }
 
 .buy {
   font-family: var(--primary-font-family);
+  font-size: var(--primary-font-size);
   text-align: center;
-  font-size: 14px;
-  text-decoration: none;
+  justify-content: center;
+  text-decoration: none; /* toglie la visualizzazione del il link*/
   color: black;
   font-weight: bold;
+  padding: 10px;
 }
 
 /* SEZIONE 2 SET IN EVIDENZA */
 
 .section2 {
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  flex: 1;
-  font-size: 12px;
+  flex-direction: row; /*la direzione è in riga ma gli elementi sottostanti al loro interno saranno in colonna*/
   font-family: var(--primary-font-family);
-  margin: 0;
-  align-items: stretch;
+  background-color: #e4e3e3;
+  margin: 1rem;
 }
 .set_in_evidenza {
   display: flex;
-  flex-direction: row;
-  justify-items: auto;
-  width: 100%;
-  padding: 3%;
-  font-size: 24px;
+  justify-items: flex-start;
   font-family: var(--primary-font-family);
-  margin: 0;
-  margin: 0 0 1rem 0;
+  padding: 50px;
 }
 
 .carosel {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  width: auto;
-  height: auto;
-  color: #141414;
-  margin: 0;
-  max-width: 300px;
-  padding: 16px;
-  gap: 1rem; /* Spazio tra gli elementi */
-  align-items: stretch;
+  justify-content: center;
+  gap: 10px;
+  margin: auto;
 }
 
 .cardbox1 {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 100%;
-  height: auto;
   color: #141414;
   background-color: white;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .cardbox2 {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 100%;
   height: auto;
   color: #141414;
   background-color: white;
+  justify-content: center;
 }
 .cardbox3 {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  width: auto;
   height: auto;
   color: #141414;
   background-color: white;
+  justify-content: center;
 }
 .cardbox4 {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 100%;
   height: auto;
   color: #141414;
   background-color: white;
+  justify-content: center;
 }
 .cardbox5 {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 100%;
   height: auto;
   color: #141414;
   background-color: white;
+  justify-content: center;
 }
 
 .btnNews {
-  width: 100%;
-  height: auto;
+  display: flex;
+  flex-wrap: wrap;
   font-style: var(--primary-font-family);
   background-color: var(--primary-color);
+  padding: 10px;
+  border: solid 0.5px yellow;
+  border-radius: 15px;
+  height: auto;
   font-weight: bold;
-  max-width: 100%;
+  justify-content: flex-end;
 }
 
 .btnBasket {
-  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  border: 10px;
+  border-radius: 15px;
   height: auto;
   background-color: #f47d20;
-  border-radius: 62.4375rem;
   font-weight: bold;
-  max-width: 100%;
   justify-content: center;
-  margin-inline-end: 100px;
+  margin: auto;
 }
 
 .price {
@@ -308,12 +370,20 @@ body {
 }
 
 .imgcard {
-  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: center;
+  width: 100px;
   height: auto; /* Altezza fissa per immagini uniformi */
-  max-width: 300px;
   background-color: white;
+  margin: auto;
+}
+
+.prg {
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 300px;
-  height: 250px;
+  text-align: center;
+  align-items: center;
+  margin: 3px;
 }
