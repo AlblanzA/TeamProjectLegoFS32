@@ -1,4 +1,19 @@
 @font-face {
+  font-family: "Fira Sans";
+  src: url("assets/font/Fontspring-DEMO-cerapro-black.otf");
+  src: url("assets/font/Fontspring-DEMO-cerapro-blackitalic.otf");
+  src: url("assets/font/Fontspring-DEMO-cerapro-bold.otf");
+  src: url("assets/font/Fontspring-DEMO-cerapro-bolditalic.otf");
+  src: url("assets/font/Fontspring-DEMO-cerapro-light.otf");
+  src: url("assets/font/Fontspring-DEMO-cerapro-lightitalic.otf");
+  src: url("assets/font/Fontspring-DEMO-cerapro-medium.otf");
+  src: url("assets/font/Fontspring-DEMO-cerapro-mediumitalic.otf");
+  src: url("assets/font/Fontspring-DEMO-cerapro-regular.otf");
+  src: url("assets/font/Fontspring-DEMO-cerapro-regularitalic.otf");
+  src: url("assets/font/Fontspring-DEMO-cerapro-thin.otf");
+  src: url("assets/font/Fontspring-DEMO-cerapro-thinitalic.otf");
+}
+@font-face {
   font-family: "Cera pro, SanSerif";
   src: url("assets/font/Fontspring-DEMO-cerapro-regular.otf");
   font-style: normal;
